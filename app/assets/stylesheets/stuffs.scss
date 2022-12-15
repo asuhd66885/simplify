@@ -1,0 +1,219 @@
+﻿@charset "utf-8";
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+input,
+textarea,
+p,
+th,
+td,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  line-height: 2;
+  font-family: "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Osaka,
+    "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro";
+  font-size: 75%;
+  background-color: #393f4c;
+  color: #fff;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  /*リンクの文字設定(マウスをのせる前)*/
+  color: #ffff00; /*文字色指定*/
+  text-decoration: none; /*テキストの装飾指定(下線、上線など)(noneはなし)*/
+}
+
+a:hover {
+  /*リンクの文字設定(マウスをのせた時)*/
+  color: #f0e68c; /*文字色指定*/
+  text-decoration: underline; /*テキストの装飾指定(下線、上線など)(underlineは下線を引く)*/
+}
+
+.color1 {
+  color: #ff0033; /*文字色指定*/
+}
+
+/* ----- レイアウト ----- */
+
+#container {
+  /*container(入れ物、容器)の中に各要素(ボックス)を配置*/
+  position: relative; /*ボックスの配置方法(relativeは相対位置配置)*/
+  width: 100%; /*幅指定(100%は画面横幅いっぱいに表示)*/
+  margin: auto; /*ボックス外側の余白(autoはボックス幅や隣接する他ボックス幅による自動余白割り当て)*/
+}
+
+/* ----- トップロゴ ----- */
+
+.toplogo {
+  font-family: "Berkshire Swash", cursive;
+  font-family: "Ceviche One", cursive;
+  font-family: "Sonsie One", cursive; /*Webフォントの種類指定*/
+  font-size: 7em; /* フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
+  text-transform: uppercase; /*大文字と小文字の変換を指定するプロパティ(uppercaseは全ての文字を大文字に変換)*/
+  text-decoration: underline;
+}
+
+.toplogo a {
+  color: #fff; /*文字色指定*/
+}
+
+.toplogo a:hover {
+  text-decoration: none; /*テキストの装飾指定(下線、上線など)(noneはなし)*/
+  color: #ccc; /*文字色指定*/
+}
+
+/* ----- h1 ----- */
+
+h1 {
+  position: fixed; /*ボックスの配置方法(fixedは固定配置)*/
+  right: 20px; /*右からの距離(positionで指定している場合に適用)*/
+  top: 20px; /*上からの距離(positionで指定している場合に適用)*/
+  color: #ddd; /*文字色指定*/
+  font-size: 4em; /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
+  font-weight: normal; /*フォントの太さ指定(normalは標準)*/
+  font-family: "Berkshire Swash", cursive;
+  font-family: "Ceviche One", cursive;
+  font-family: "Sonsie One", cursive;
+}
+
+/* ----- トップページコンテンツ ----- */
+
+.toppost {
+  position: fixed; /*ボックスの配置方法(fixedは固定配置)*/
+  right: 20px; /*右からの距離(positionで指定している場合に適用)*/
+  bottom: 20px; /*下からの距離(positionで指定している場合に適用)*/
+}
+
+.toppost h2,
+ul {
+  color: #ddd; /*文字色指定*/
+  font-size: em; /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
+  font-weight: normal; /*フォントの太さ指定(normalは標準)*/
+}
+
+/* ----- コンテンツ ----- */
+
+.contents {
+  margin: 40px 0 0 300px; /*ボックス外側の余白(値4つは左から上,右,下,左の値)*/
+}
+
+.contents h2 {
+  color: #ddd; /*文字色指定*/
+  font-size: 6em; /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
+  font-weight: normal; /*フォントの太さ指定(normalは標準)*/
+  text-transform: uppercase; /*大文字と小文字の変換を指定するプロパティ(uppercaseは全ての文字を大文字に変換)*/
+  margin-bottom: 50px; /*ボックス外側下の余白*/
+}
+
+.contents ul {
+  color: #ddd; /*文字色指定*/
+  font-size: 1.6em; /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
+}
+
+/* ----- テーブル設定 ----- */
+
+.ta {
+  width: 800px; /*幅指定*/
+  border-collapse: collapse; /*境界線の表示指定(collapseは重ねて表示)*/
+}
+.ta th,
+td {
+  border: none; /*境界線の一括指定(noneはなし)*/
+  padding: 0 0 10px 10px; /*ボックス内側の余白(値4つは左から上,右,下,左の値)*/
+  color: #ddd; /*文字色指定*/
+  font-size: 1.5em; /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
+  font-weight: normal; /*フォントの太さ指定(normalは標準)*/
+  text-align: left; /*行の水平方向の揃え方(leftは左寄せ)*/
+}
+
+/* ----- ページ左側の内容 ----- */
+
+/* ----- ロゴ ----- */
+
+.logo {
+  position: fixed; /*ボックスの配置方法(fixedは固定配置)*/
+  left: 20px; /*左からの距離(positionで指定している場合に適用)*/
+  top: 50px; /*上からの距離(positionで指定している場合に適用)*/
+  font-family: "Berkshire Swash", cursive;
+  font-family: "Ceviche One", cursive;
+  font-family: "Sonsie One", cursive; /*Webフォントの種類指定*/
+  font-size: 1.5em; /* フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
+  text-align: center; /*行の水平方向の揃え方(centerは中央揃え)*/
+  text-transform: uppercase; /*大文字と小文字の変換を指定するプロパティ(uppercaseは全ての文字を大文字に変換)*/
+}
+
+.logo a {
+  color: #f5f5f5; /*文字色指定*/
+}
+
+.logo a:hover {
+  text-decoration: none; /*テキストの装飾指定(下線、上線など)(noneはなし)*/
+  color: #dcdcdc; /*文字色指定*/
+}
+
+/* ----- ページ左側のメニュー ----- */
+
+.sidemenu {
+  position: fixed; /*ボックスの配置方法(fixedは固定配置)*/
+  left: 20px; /*左からの距離(positionで指定している場合に適用)*/
+  top: 200px; /*上からの距離(positionで指定している場合に適用)*/
+  font-family: "Berkshire Swash", cursive;
+  font-family: "Ceviche One", cursive;
+  font-family: "Sonsie One", cursive; /*Webフォントの種類指定*/
+  font-size: 3em; /* フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
+  text-align: center; /*行の水平方向の揃え方(centerは中央揃え)*/
+  text-transform: uppercase; /*大文字と小文字の変換を指定するプロパティ(uppercaseは全ての文字を大文字に変換)*/
+}
+
+.sidemenu li a {
+  color: #ddd; /*文字色指定*/
+}
+
+.sidemenu li a:hover {
+  text-decoration: none; /*テキストの装飾指定(下線、上線など)(noneはなし)*/
+  color: #ffd700; /*文字色指定*/
+  cursor: pointer; /*マウスカーソルの形状を指定(pointerはリンクカーソル)*/
+}
+
+.active {
+  color: #ffd700 !important; /*文字色指定*/
+}
+
+.left-image {
+  background-size: cover;
+  width: 50%;
+  height: 300px;
+  float: right;
+}
+
+/* ----- Copyright ----- */
+
+.copyright {
+  position: fixed; /*ボックスの配置方法(fixedは固定配置)*/
+  left: 20px; /*左からの距離(positionで指定している場合に適用)*/
+  bottom: 10px; /*下からの距離(positionで指定している場合に適用)*/
+  color: #ddd; /*文字色指定*/
+  font-size: 0.8em; /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
+}
