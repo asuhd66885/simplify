@@ -13,7 +13,13 @@
    	 <!--/ロゴ--></div>
 		 
 <h1>be a simplist!</h1>
-<%= image_tag "oioi.png", class:"left-image"%>
+<div class="side-bar-header">
+<% if user_signed_in? %>
+  <div class="header-name">
+    <%= link_to current_user.name, edit_user_path(current_user) %>
+  </div>
+	<% end %>
+	<%= image_tag "oioi.png", class:"left-image"%>
 <!--ページの右下のメニュー-->
 <div class="toppost">
           <h2>what does the simplism mean?</h2>
@@ -29,10 +35,13 @@
 <!--ページの左のメニュー-->
 		<div class="sidemenu">
   		<ul>
-		    <li><a href="about simplify.html">about simplify</a>
-		    <li><a href="check my stuffs.html">check my stuffs</a>
-		    <li><a href="check my stuffs.html">post a stuff</a>
-		  </ul>
+		    <li><%= link_to "about simplify"%>
+		    <li><%= link_to "check my stuffs"%>
+		    <li><%= link_to "post a stuff"%>
+				<li><%= link_to "Create Account", new_user_registration_path %>
+				<li><%= link_to "Log in", new_user_session_path %>
+		  
+			</ul>
 		<!--/ページの左のメニュー--></div>
 <div class="copyright">Copyright © 2022 Daiki. All Rights Reserved.</div>
 </div>

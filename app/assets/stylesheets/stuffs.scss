@@ -41,7 +41,7 @@ ul {
 
 a {
   /*リンクの文字設定(マウスをのせる前)*/
-  color: #ffff00; /*文字色指定*/
+  color: #ddd; /*文字色指定*/
   text-decoration: none; /*テキストの装飾指定(下線、上線など)(noneはなし)*/
 }
 
@@ -151,7 +151,16 @@ ul {
   color: #ddd; /*文字色指定*/
   font-size: 1.6em; /*フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
 }
-
+.header-name {
+  color: #ddd;
+  font-family: "Berkshire Swash", cursive;
+  font-family: "Ceviche One", cursive;
+  font-family: "Sonsie One", cursive;
+  font-size: 3em;
+  text-align: right;
+  text-decoration: underline;
+  margin-right: 5%;
+}
 /* ----- テーブル設定 ----- */
 
 .ta {
@@ -213,12 +222,12 @@ td {
 
 .sidemenu li a:hover {
   text-decoration: none; /*テキストの装飾指定(下線、上線など)(noneはなし)*/
-  color: #ffd700; /*文字色指定*/
+  color: #ddd; /*文字色指定*/
   cursor: pointer; /*マウスカーソルの形状を指定(pointerはリンクカーソル)*/
 }
 
 .active {
-  color: #ffd700 !important; /*文字色指定*/
+  color: #ddd !important; /*文字色指定*/
 }
 
 .left-image {
