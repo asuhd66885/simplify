@@ -8,7 +8,10 @@ class UsersController < ApplicationController
       render :edit
     end
     end
+    
+    def index
 
+    end
   
   private
 

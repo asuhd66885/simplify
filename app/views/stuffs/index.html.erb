@@ -35,11 +35,16 @@
 <!--ページの左のメニュー-->
 		<div class="sidemenu">
   		<ul>
-		    <li><%= link_to "about simplify"%>
+		    <li><%= link_to "about simplify", users_path%>
 		    <li><%= link_to "check my stuffs"%>
 		    <li><%= link_to "post a stuff"%>
 				<li><%= link_to "Create Account", new_user_registration_path %>
+				<% unless user_signed_in? %>
 				<li><%= link_to "Log in", new_user_session_path %>
+				<%end %>
+				<% if user_signed_in? %>
+				<li><%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'btn'%>
+<%end %>
 		  
 			</ul>
 		<!--/ページの左のメニュー--></div>
