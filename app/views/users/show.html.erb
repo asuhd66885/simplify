@@ -1,0 +1,18 @@
+<h5><%= link_to "LISTS", root_path%></h5>
+	<%= image_tag "sam.png", class:"left-image23"%>
+<% @stuffs.each do |stuff| %>
+  <div class="article">
+    <div class='item-img-content'>
+      <%= image_tag stuff.image, class: 'message-image'  %>
+    </div>
+    <div class="article-title">
+      <%= stuff.name %>
+    </div>
+    <div class="article-title">
+      <%= stuff.info %>
+    </div>
+    <div class="article-title">
+      <%= stuff.category.name %>
+    </div>
+  </div>
+<%end%>

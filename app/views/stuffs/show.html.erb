@@ -1,0 +1,18 @@
+<h5>LIST</h5>
+
+<% @stuffs.each do |stuff| %>
+  <div class="article">
+     <div class='item-img-content'>
+    <%= image_tag stuff.image.variant(resize: '500x500'), class: 'message-image'  %>
+    </div>
+    <div class="article-title">
+      <%= stuff.name %>
+    </div>
+    <div class="article-info">
+      <%= stuff.info %>
+    </div>
+    <div class="article-genre">
+      <%= stuff.category.name %>
+    </div>
+  </div>
+<% end %>

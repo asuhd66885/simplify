@@ -32,8 +32,8 @@
 		<div class="sidemenu">
   		<ul>
 		    <li><%= link_to "about simplify", users_path%>
-		    <li><%= link_to "check my stuffs"%>
-		    <li><%= link_to "post a stuff"%>
+		    <li><%= link_to "check my stuffs", user_path(current_user) %>
+		    <li><%= link_to "post a stuff", new_stuff_path%>
 				<% unless user_signed_in? %>
 				<li><%= link_to "Create Account", new_user_registration_path %>
 				<%end%>

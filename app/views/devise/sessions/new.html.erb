@@ -4,6 +4,8 @@
       <h2>Log in</h2>
       <h5>登録しているユーザーでログイン</h5>
       <%= render "devise/shared/links"%>
+          <%= link_to "トップページに戻る", :back, class: 'btn'%>
+
     </div>
     <div class='account-page__inner--right user-form'>
       <%= form_with model: resource, as: resource_name, url: session_path(resource_name), local: true do |f|%>
@@ -24,6 +26,7 @@
             </div>
           </div>
           <div class='actions'>
+          
             <%= f.submit "Log in", class: 'btn'%>
           </div>
         </div>
