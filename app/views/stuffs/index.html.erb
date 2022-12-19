@@ -1,18 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <head>
 <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Ceviche+One&family=Sonsie+One&display=swap" rel="stylesheet">
 </head>
-
 <body>
 <!--メインの内容-->
 <div id="container">
-
- <!--ロゴ-->
+<!--ロゴ-->
 	  <div class="toplogo">Simplify
    	 <!--/ロゴ--></div>
-		 
-<h1>be a simplist!</h1>
+		 <h1>be a simplist!</h1>
 <div class="side-bar-header">
 <% if user_signed_in? %>
   <div class="header-name">
@@ -38,15 +34,16 @@
 		    <li><%= link_to "about simplify", users_path%>
 		    <li><%= link_to "check my stuffs"%>
 		    <li><%= link_to "post a stuff"%>
+				<% unless user_signed_in? %>
 				<li><%= link_to "Create Account", new_user_registration_path %>
+				<%end%>
 				<% unless user_signed_in? %>
 				<li><%= link_to "Log in", new_user_session_path %>
-				<%end %>
+				<% end %>
 				<% if user_signed_in? %>
 				<li><%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'btn'%>
-<%end %>
-		  
-			</ul>
+<% end %>
+		  </ul>
 		<!--/ページの左のメニュー--></div>
 <div class="copyright">Copyright © 2022 Daiki. All Rights Reserved.</div>
 </div>
