@@ -337,16 +337,12 @@ h4 {
 .item-img-content {
   display: block;
 }
-.article {
+.article-title {
   position: relative;
-  color: #000;
-  line-height: 1.4;
-  -webkit-box-reflect: below -10px -webkit-linear-gradient(
-      top,
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0) 10%,
-      rgba(0, 0, 0, 0.6)
-    );
+  color: #fff;
+  line-height: 1.5;
+  border: solid 5px #6091d3;
+  border-radius: 15px;
 }
 
 h5 {
@@ -368,4 +364,10 @@ h5 {
   position: absolute;
   top: 50px;
   left: 50px;
+}
+
+.message-image {
+  display: block;
+  height: 300px;
+  width: 300px;
 }

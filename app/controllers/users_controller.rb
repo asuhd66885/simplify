@@ -14,6 +14,7 @@ class UsersController < ApplicationController
   end
   def show
     @stuffs = Stuff.where(user_id: current_user.id)
+    @stuffs = Stuff.all.order(created_at: :desc)
   end
   private
   def user_params

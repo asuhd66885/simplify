@@ -6,7 +6,7 @@ class StuffsController < ApplicationController
   def create
     @stuff = Stuff.new(stuff_params)
     if @stuff.save
-      redirect_to user_path
+      redirect_to user_path(current_user) 
     else
       render :new
     end

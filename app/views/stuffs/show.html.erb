@@ -2,16 +2,16 @@
 
 <% @stuffs.each do |stuff| %>
   <div class="article">
-     <div class='item-img-content'>
-    <%= image_tag stuff.image.variant(resize: '500x500'), class: 'message-image'  %>
+     <div class='article'>
+    <%= image_tag stuff.image.variant(resize: '500x500'), class: 'article-image'  %>
     </div>
     <div class="article-title">
       <%= stuff.name %>
     </div>
-    <div class="article-info">
+    <div class="article-title">
       <%= stuff.info %>
     </div>
-    <div class="article-genre">
+    <div class="article-title">
       <%= stuff.category.name %>
     </div>
   </div>
