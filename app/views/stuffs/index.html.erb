@@ -1,5 +1,4 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <head>
 <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Ceviche+One&family=Sonsie+One&display=swap" rel="stylesheet">
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -8,11 +7,9 @@ $(function(){
     var setImg = '#photo';
     var fadeSpeed = 1600;
     var switchDelay = 5000;
-
-    $(setImg).children('img').css({opacity:'0'});
+$(setImg).children('img').css({opacity:'0'});
     $(setImg + ' img:first').stop().animate({opacity:'3',zIndex:'20'},fadeSpeed);
-
-    setInterval(function(){
+setInterval(function(){
         $(setImg + ' :first-child').animate({opacity:'0'},fadeSpeed).next('img').animate({opacity:'2'},fadeSpeed).end().appendTo(setImg);
     },switchDelay);
 });
@@ -23,7 +20,8 @@ $(function(){
 <div id="container">
 <!--ロゴ-->
 	  <div class="toplogo">Simplify
-   	 <!--/ロゴ--></div>
+   	 <!--/ロゴ-->
+		 </div>
 		 <h1>be a simplist!</h1>
 <div class="side-bar-header">
 <% if user_signed_in? %>

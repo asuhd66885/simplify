@@ -26,7 +26,6 @@
       </div>
     </div>
     <%# /商品名と商品説明 %>
-
     <%# 物の詳細 %>
     <div class="items-detail">
       <div class="form">
@@ -36,9 +35,7 @@
         <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"stuff_category"}) %>
     </div>
     <%# 下部ボタン %>
-   
       <%= f.submit "更新する" ,class:"stuff-btn" %>
-   
   </div>
   <% end %>
 </div>
