@@ -18,6 +18,19 @@ class StuffsController < ApplicationController
   def new
     @stuff = Stuff.new
   end
+  def destroy
+   @stuff = Stuff.find(params[:id])
+    @stuff.destroy
+    redirect_to root_path
+  end
+  def edit
+    @stuff = Stuff.find(params[:id])
+  end
+  def update
+     @stuff = Stuff.find(params[:id])
+     @stuff.update(stuff_params)
+     redirect_to user_path(current_user)
+  end
   private
 
   def stuff_params

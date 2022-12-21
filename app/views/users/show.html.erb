@@ -14,5 +14,11 @@
     <div class="article-title">
       <%= stuff.category.name %>
     </div>
+    <div class="article-title">
+    <%= link_to "DELETE", stuff_path(stuff.id), method: :delete %>
+    </div>
+    <div class="article-title">
+    <%= link_to "EDIT", edit_stuff_path(stuff.id) %>
+    </div>
   </div>
 <%end%>

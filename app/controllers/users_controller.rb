@@ -16,6 +16,10 @@ class UsersController < ApplicationController
     @stuffs = Stuff.where(user_id: current_user.id)
     @stuffs = Stuff.all.order(created_at: :desc)
   end
+  def destroy
+    stuff = Stuff.find(params[:id])
+     stuff.destroy
+   end
   private
   def user_params
     params.require(:user).permit(:name, :email)

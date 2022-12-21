@@ -32,6 +32,7 @@ body {
   font-size: 75%;
   background-color: #393f4c;
   color: #fff;
+  position: sticky;
 }
 
 ol,
@@ -42,6 +43,7 @@ ul {
 a {
   /*リンクの文字設定(マウスをのせる前)*/
   color: #ddd; /*文字色指定*/
+
   text-decoration: none; /*テキストの装飾指定(下線、上線など)(noneはなし)*/
 }
 
@@ -73,6 +75,7 @@ a:hover {
   font-size: 7em; /* フォントサイズ指定(emはフォントの高さを１とした相対指定)*/
   text-transform: uppercase; /*大文字と小文字の変換を指定するプロパティ(uppercaseは全ての文字を大文字に変換)*/
   text-decoration: underline;
+  position: sticky;
 }
 
 .toplogo a {
