@@ -58,7 +58,9 @@ $(function(){
 				<% if user_signed_in? %>
 		    <li><%= link_to "check my stuffs", user_path(current_user.id) %>
 				<% end %>
+				<% if user_signed_in? %>
 		    <li><%= link_to "post a stuff", new_stuff_path%>
+				<% end %>
 				<% unless user_signed_in? %>
 				<li><%= link_to "Create Account", new_user_registration_path %>
 				<%end%>
