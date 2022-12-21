@@ -1,6 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <head>
 <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Ceviche+One&family=Sonsie+One&display=swap" rel="stylesheet">
+
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    var setImg = '#photo';
+    var fadeSpeed = 1600;
+    var switchDelay = 5000;
+
+    $(setImg).children('img').css({opacity:'0'});
+    $(setImg + ' img:first').stop().animate({opacity:'3',zIndex:'20'},fadeSpeed);
+
+    setInterval(function(){
+        $(setImg + ' :first-child').animate({opacity:'0'},fadeSpeed).next('img').animate({opacity:'2'},fadeSpeed).end().appendTo(setImg);
+    },switchDelay);
+});
+</script>
 </head>
 <body>
 <!--メインの内容-->
@@ -15,8 +34,12 @@
     <%= link_to current_user.name, edit_user_path(current_user) %>
   </div>
 	<% end %>
-	<%= image_tag "oioi.png", class:"left-image"%>
-<!--ページの右下のメニュー-->
+<div id="photo">
+<%= image_tag "oioi.png" ,class:"left-image"%>
+<%= image_tag "as.png" , class:"left-image"%>
+<%= image_tag "xs.png" ,class:"left-image"%>
+<%= image_tag "ws.png"  ,class:"left-image"%>
+</div><!--ページの右下のメニュー-->
 <div class="toppost">
           <h2>what does the simplism mean?</h2>
           <ul>
@@ -32,7 +55,9 @@
 		<div class="sidemenu">
   		<ul>
 		    <li><%= link_to "about simplify", users_path%>
-		    <li><%= link_to "check my stuffs", user_path(current_user) %>
+				<% if user_signed_in? %>
+		    <li><%= link_to "check my stuffs", user_path(current_user.id) %>
+				<% end %>
 		    <li><%= link_to "post a stuff", new_stuff_path%>
 				<% unless user_signed_in? %>
 				<li><%= link_to "Create Account", new_user_registration_path %>
