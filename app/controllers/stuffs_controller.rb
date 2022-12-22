@@ -1,7 +1,6 @@
 class StuffsController < ApplicationController
   def index
     @stuffs = Stuff.all.order(created_at: :desc)
-    
   end
 
   def create
