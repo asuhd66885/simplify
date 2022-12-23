@@ -70,7 +70,7 @@ td.disabled {
 /*本日*/
 td.today {
   background-color: #d65e72;
-  color: #fff;
+  color: rgb(97, 94, 94);
 }
 
 /*ボタン*/
@@ -96,7 +96,7 @@ td.today {
 #next {
   float: right;
 }
-.wrapper {
+.col-md-8 {
   max-width: 600px;
   margin: 0 auto;
   color: rgb(247, 247, 247);

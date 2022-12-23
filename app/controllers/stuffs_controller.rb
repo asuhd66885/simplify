@@ -39,6 +39,6 @@ class StuffsController < ApplicationController
   private
 
   def stuff_params
-    params.require(:stuff).permit(:name, :info, :category_id, :image).merge(user_id: current_user.id)
+    params.require(:stuff).permit(:name, :info, :category_id, :image, :start_time).merge(user_id: current_user.id)
   end
 end

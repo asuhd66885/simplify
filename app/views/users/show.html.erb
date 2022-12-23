@@ -1,20 +1,26 @@
 <h5><%= link_to "LISTS", root_path%></h5>
 	<%= image_tag "sam.png", class:"left-image23"%>
-  <div class="wrapper">
-    <h6 id="header"></h6>
+ <div class="col-md-8">
+<%= month_calendar events: @stuffs do |date, stuffs| %>
+<%= date.day %>
 
-    <div id="next-prev-button">
-        <button id="prev" onclick="prev()">‹</button>
-        <button id="next" onclick="next()">›</button>
-    </div>
 
-    <div id="calendar">
-    </div>
+<% stuffs.each do |stuff| %>
+  <div>
+    <%= stuff.name %>
+  </div>
+<% end %>
+
+<% end %>
+</div>
     
     
 </div>
 <% @stuffs.each do |stuff| %>
   <div class="article">
+   <div class="article-title">
+      <%= stuff.created_at.strftime('%Y/%m/%d') %>
+    </div>
     <div class='item-img-content'>
       <%= image_tag stuff.image, class: 'message-image'  %>
     </div>

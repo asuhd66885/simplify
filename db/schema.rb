@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2022_12_22_060008) do
     t.string "name", null: false
     t.text "info", null: false
     t.integer "category_id", null: false
+    t.datetime "start_time"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

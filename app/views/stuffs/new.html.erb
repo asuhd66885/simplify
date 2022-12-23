@@ -3,6 +3,9 @@
     <h4 class="h4"><%= link_to "post a stuff", root_path%></h4>
     <%= form_with model: @stuff, local: true do |f| %>
     <%# render 'shared/error_messages', model: f.object %>
+    <div class="new-items">
+    <%= f.datetime_select :start_time %>
+    </div>
     <div class="img-upload">
       <div class="weight-bold-text">
         画像
